@@ -48,6 +48,17 @@ Install mariadb-server Mysql
 3. sudo systemctl status mariadb
 4. sudo mysqladmin version
 
+------------------------------
+Database Install:
+------------------------
+1. mysql -u root -p
+2. set global net_buffer_length=1000000; 
+3. set global max_allowed_packet=1000000000; 
+4. SET foreign_key_checks = 0; 
+5. use DATABASE_NAME;
+6. source /home/sayem/Downloads/arambagh.sql
+7. SET foreign_key_checks = 1;
+
 --------------------------------
 Install phpmyadmin
 ------------------------------
@@ -62,12 +73,29 @@ Project Setup
 4. cp .env.example .env
 5. php artisan key:generate
 6. nano .env
-7. sudo a2enmod rewrite
-8. sudo chmod -R 777 storage
-9. sudo service apache2 restart
+7. change app url at .env APP_URL=http://localhost/public
+8. sudo a2enmod rewrite
+9. sudo chmod -R 0777 storage/
+10. change app url at .env APP_URL=http://localhost/public
+11. sudo service apache2 restart
 
 --------------------------------
 Update Table Join
 -------------------------------
 1. ALTER TABLE categories CONVERT TO CHARACTER SET utf8;
 2. ALTER TABLE category_translations  CONVERT TO CHARACTER SET utf8;
+
+--------------------------------
+Add .htaccess to root
+-------------------------------
+
+<IfModule mod_rewrite.c>
+      <IfModule mod_negotiation.c>
+      Options -MultiViews
+      </IfModule>
+      RewriteEngine On
+      RewriteRule ^(.*)/$ /$1 [L,R=301]
+      RewriteCond %{REQUEST_FILENAME} !-d
+      RewriteCond %{REQUEST_FILENAME} !-f
+      RewriteRule ^ index.php [L]
+  </IfModule>
