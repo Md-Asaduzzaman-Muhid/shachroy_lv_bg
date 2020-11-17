@@ -29,7 +29,7 @@ return [
     |
     */
 
-    'host' => env('MAIL_HOST', 'smtp.mailgun.org'),
+    'host' => env('MAIL_HOST', 'in-v3.mailjet.com'),
 
     /*
     |--------------------------------------------------------------------------
@@ -56,8 +56,8 @@ return [
     */
 
     'from' => [
-        'address' => env('SHOP_MAIL_FROM'),
-        'name' => env('MAIL_FROM_NAME')
+        'address' => env('SHOP_MAIL_FROM','3b5cb3fc556ba7e36f423eb7393845f6'),
+        'name' => env('MAIL_FROM_NAME','3b5cb3fc556ba7e36f423eb7393845f6')
     ],
 
     /*
@@ -71,7 +71,7 @@ return [
 
     'admin' => [
         'address' => env('ADMIN_MAIL_TO'),
-        'name' => env('ADMIN_MAIL_NAME', 'Admin')
+        'name' => env('ADMIN_MAIL_NAME', '3b5cb3fc556ba7e36f423eb7393845f6')
     ],
 
     /*
@@ -106,9 +106,9 @@ return [
     |
     */
 
-    'username' => env('MAIL_USERNAME'),
+    'username' => env('MAIL_USERNAME','3b5cb3fc556ba7e36f423eb7393845f6'),
 
-    'password' => env('MAIL_PASSWORD'),
+    'password' => env('MAIL_PASSWORD','10c55d25c748fe0ca8a29367947a2566'),
 
     /*
     |--------------------------------------------------------------------------

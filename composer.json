@@ -36,6 +36,7 @@
         "laravel/socialite": "^4.4",
         "laravel/tinker": "^2.0",
         "laravel/ui": "^2.0",
+        "leeovery/laravel-sendinblue": "^0.3.0",
         "maatwebsite/excel": "3.1.19",
         "prettus/l5-repository": "^2.6",
         "tymon/jwt-auth": "^1.0.0"
