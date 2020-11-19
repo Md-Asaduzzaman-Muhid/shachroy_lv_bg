@@ -22,26 +22,25 @@
                 @{{ errors.first('address-form.shipping[first_name]') }}
             </span>
         </div>
+{{--        <div :class="`col-12 form-field ${errors.has('address-form.shipping[last_name]') ? 'has-error' : ''}`">--}}
+{{--            <label for="shipping[last_name]" class="mandatory">--}}
+{{--                {{ __('shop::app.checkout.onepage.last-name') }}--}}
+{{--            </label>--}}
 
-        <div :class="`col-12 form-field ${errors.has('address-form.shipping[last_name]') ? 'has-error' : ''}`">
-            <label for="shipping[last_name]" class="mandatory">
-                {{ __('shop::app.checkout.onepage.last-name') }}
-            </label>
+{{--            <input--}}
+{{--                type="text"--}}
+{{--                class="control"--}}
+{{--                v-validate="'required'"--}}
+{{--                id="shipping[last_name]"--}}
+{{--                name="shipping[last_name]"--}}
+{{--                v-model="address.shipping.last_name"--}}
+{{--                @change="validateForm('address-form')"--}}
+{{--                data-vv-as="&quot;{{ __('shop::app.checkout.onepage.last-name') }}&quot;" />--}}
 
-            <input
-                type="text"
-                class="control"
-                v-validate="'required'"
-                id="shipping[last_name]"
-                name="shipping[last_name]"
-                v-model="address.shipping.last_name"
-                @change="validateForm('address-form')"
-                data-vv-as="&quot;{{ __('shop::app.checkout.onepage.last-name') }}&quot;" />
-
-            <span class="control-error" v-if="errors.has('address-form.shipping[last_name]')">
-                @{{ errors.first('address-form.shipping[last_name]') }}
-            </span>
-        </div>
+{{--            <span class="control-error" v-if="errors.has('address-form.shipping[last_name]')">--}}
+{{--                @{{ errors.first('address-form.shipping[last_name]') }}--}}
+{{--            </span>--}}
+{{--        </div>--}}
 
         <div :class="`col-12 form-field ${errors.has('address-form.shipping[email]') ? 'has-error' : ''}`">
             <label for="shipping[email]" class="mandatory">
@@ -152,67 +151,67 @@
         </div>
 
 
-        <div :class="`col-12 form-field ${errors.has('address-form.shipping[state]') ? 'has-error' : ''}`">
-            <label for="shipping[state]" class="mandatory">
-                {{ __('shop::app.checkout.onepage.state') }}
-            </label>
+{{--        <div :class="`col-12 form-field ${errors.has('address-form.shipping[state]') ? 'has-error' : ''}`">--}}
+{{--            <label for="shipping[state]" class="mandatory">--}}
+{{--                {{ __('shop::app.checkout.onepage.state') }}--}}
+{{--            </label>--}}
 
-            <input
-                type="text"
-                class="control"
-                id="shipping[state]"
-                name="shipping[state]"
-                v-validate="'required'"
-                v-if="!haveStates('shipping')"
-                v-model="address.shipping.state"
-                @change="validateForm('address-form')"
-                data-vv-as="&quot;{{ __('shop::app.checkout.onepage.state') }}&quot;" />
+{{--            <input--}}
+{{--                type="text"--}}
+{{--                class="control"--}}
+{{--                id="shipping[state]"--}}
+{{--                name="shipping[state]"--}}
+{{--                v-validate="'required'"--}}
+{{--                v-if="!haveStates('shipping')"--}}
+{{--                v-model="address.shipping.state"--}}
+{{--                @change="validateForm('address-form')"--}}
+{{--                data-vv-as="&quot;{{ __('shop::app.checkout.onepage.state') }}&quot;" />--}}
 
-            <select
-                id="shipping[state]"
-                name="shipping[state]"
-                v-validate="'required'"
-                class="control styled-select"
-                v-if="haveStates('shipping')"
-                v-model="address.shipping.state"
-                @change="validateForm('address-form')"
-                data-vv-as="&quot;{{ __('shop::app.checkout.onepage.state') }}&quot;">
+{{--            <select--}}
+{{--                id="shipping[state]"--}}
+{{--                name="shipping[state]"--}}
+{{--                v-validate="'required'"--}}
+{{--                class="control styled-select"--}}
+{{--                v-if="haveStates('shipping')"--}}
+{{--                v-model="address.shipping.state"--}}
+{{--                @change="validateForm('address-form')"--}}
+{{--                data-vv-as="&quot;{{ __('shop::app.checkout.onepage.state') }}&quot;">--}}
 
-                <option value="">{{ __('shop::app.checkout.onepage.select-state') }}</option>
+{{--                <option value="">{{ __('shop::app.checkout.onepage.select-state') }}</option>--}}
 
-                <option v-for='(state, index) in countryStates[address.shipping.country]' :value="state.code">
-                    @{{ state.default_name }}
-                </option>
-            </select>
+{{--                <option v-for='(state, index) in countryStates[address.shipping.country]' :value="state.code">--}}
+{{--                    @{{ state.default_name }}--}}
+{{--                </option>--}}
+{{--            </select>--}}
 
-            <div class="select-icon-container" v-if="haveStates('shipping')">
-                <i class="select-icon rango-arrow-down"></i>
-            </div>
+{{--            <div class="select-icon-container" v-if="haveStates('shipping')">--}}
+{{--                <i class="select-icon rango-arrow-down"></i>--}}
+{{--            </div>--}}
 
-            <span class="control-error" v-if="errors.has('address-form.shipping[state]')">
-                @{{ errors.first('address-form.shipping[state]') }}
-            </span>
-        </div>
+{{--            <span class="control-error" v-if="errors.has('address-form.shipping[state]')">--}}
+{{--                @{{ errors.first('address-form.shipping[state]') }}--}}
+{{--            </span>--}}
+{{--        </div>--}}
 
-        <div :class="`col-12 form-field ${errors.has('address-form.shipping[postcode]') ? 'has-error' : ''}`">
-            <label for="shipping[postcode]" class="mandatory">
-                {{ __('shop::app.checkout.onepage.postcode') }}
-            </label>
+{{--        <div :class="`col-12 form-field ${errors.has('address-form.shipping[postcode]') ? 'has-error' : ''}`">--}}
+{{--            <label for="shipping[postcode]" class="mandatory">--}}
+{{--                {{ __('shop::app.checkout.onepage.postcode') }}--}}
+{{--            </label>--}}
 
-            <input
-                type="text"
-                class="control"
-                id="shipping[postcode]"
-                v-validate="'required'"
-                name="shipping[postcode]"
-                v-model="address.shipping.postcode"
-                @keyup="validateForm('address-form')"
-                data-vv-as="&quot;{{ __('shop::app.checkout.onepage.postcode') }}&quot;" />
+{{--            <input--}}
+{{--                type="text"--}}
+{{--                class="control"--}}
+{{--                id="shipping[postcode]"--}}
+{{--                v-validate="'required'"--}}
+{{--                name="shipping[postcode]"--}}
+{{--                v-model="address.shipping.postcode"--}}
+{{--                @keyup="validateForm('address-form')"--}}
+{{--                data-vv-as="&quot;{{ __('shop::app.checkout.onepage.postcode') }}&quot;" />--}}
 
-            <span class="control-error" v-if="errors.has('address-form.shipping[postcode]')">
-                @{{ errors.first('address-form.shipping[postcode]') }}
-            </span>
-        </div>
+{{--            <span class="control-error" v-if="errors.has('address-form.shipping[postcode]')">--}}
+{{--                @{{ errors.first('address-form.shipping[postcode]') }}--}}
+{{--            </span>--}}
+{{--        </div>--}}
 
         <div :class="`col-12 form-field ${errors.has('address-form.shipping[phone]') ? 'has-error' : ''}`">
             <label for="shipping[phone]" class="mandatory">
@@ -253,24 +252,24 @@
         @endauth
 
     @elseif (isset($billing) && $billing)
-        <div :class="`col-12 form-field ${errors.has('address-form.billing[company_name]') ? 'has-error' : ''}`">
-            <label for="billing[company_name]">
-                {{ __('shop::app.checkout.onepage.company-name') }}
-            </label>
+{{--        <div :class="`col-12 form-field ${errors.has('address-form.billing[company_name]') ? 'has-error' : ''}`">--}}
+{{--            <label for="billing[company_name]">--}}
+{{--                {{ __('shop::app.checkout.onepage.company-name') }}--}}
+{{--            </label>--}}
 
-            <input
-                type="text"
-                class="control"
-                id="billing[company_name]"
-                name="billing[company_name]"
-                v-model="address.billing.company_name"
-                @change="validateForm('address-form')"
-                data-vv-as="&quot;{{ __('shop::app.checkout.onepage.company-name') }}&quot;" />
+{{--            <input--}}
+{{--                type="text"--}}
+{{--                class="control"--}}
+{{--                id="billing[company_name]"--}}
+{{--                name="billing[company_name]"--}}
+{{--                v-model="address.billing.company_name"--}}
+{{--                @change="validateForm('address-form')"--}}
+{{--                data-vv-as="&quot;{{ __('shop::app.checkout.onepage.company-name') }}&quot;" />--}}
 
-            <span class="control-error" v-if="errors.has('address-form.billing[company_name]')">
-                @{{ errors.first('address-form.billing[company_name]') }}
-            </span>
-        </div>
+{{--            <span class="control-error" v-if="errors.has('address-form.billing[company_name]')">--}}
+{{--                @{{ errors.first('address-form.billing[company_name]') }}--}}
+{{--            </span>--}}
+{{--        </div>--}}
 
         <div :class="`col-12 form-field ${errors.has('address-form.billing[first_name]') ? 'has-error' : ''}`">
             <label for="billing[first_name]" class="mandatory">
@@ -292,25 +291,25 @@
             </span>
         </div>
 
-        <div :class="`col-12 form-field ${errors.has('address-form.billing[last_name]') ? 'has-error' : ''}`">
-            <label for="billing[last_name]" class="mandatory">
-                {{ __('shop::app.checkout.onepage.last-name') }}
-            </label>
+{{--        <div :class="`col-12 form-field ${errors.has('address-form.billing[last_name]') ? 'has-error' : ''}`">--}}
+{{--            <label for="billing[last_name]" class="mandatory">--}}
+{{--                {{ __('shop::app.checkout.onepage.last-name') }}--}}
+{{--            </label>--}}
 
-            <input
-                type="text"
-                v-validate="'required'"
-                class="control"
-                id="billing[last_name]"
-                name="billing[last_name]"
-                v-model="address.billing.last_name"
-                @change="validateForm('address-form')"
-                data-vv-as="&quot;{{ __('shop::app.checkout.onepage.last-name') }}&quot;" />
+{{--            <input--}}
+{{--                type="text"--}}
+{{--                v-validate="'required'"--}}
+{{--                class="control"--}}
+{{--                id="billing[last_name]"--}}
+{{--                name="billing[last_name]"--}}
+{{--                v-model="address.billing.last_name"--}}
+{{--                @change="validateForm('address-form')"--}}
+{{--                data-vv-as="&quot;{{ __('shop::app.checkout.onepage.last-name') }}&quot;" />--}}
 
-            <span class="control-error" v-if="errors.has('address-form.billing[last_name]')">
-                @{{ errors.first('address-form.billing[last_name]') }}
-            </span>
-        </div>
+{{--            <span class="control-error" v-if="errors.has('address-form.billing[last_name]')">--}}
+{{--                @{{ errors.first('address-form.billing[last_name]') }}--}}
+{{--            </span>--}}
+{{--        </div>--}}
 
         <div :class="`col-12 form-field ${errors.has('address-form.billing[email]') ? 'has-error' : ''}`">
             <label for="billing[email]" class="mandatory">
@@ -425,66 +424,66 @@
             </span>
         </div>
 
-        <div :class="`col-12 form-field ${errors.has('address-form.billing[state]') ? 'has-error' : ''}`">
-            <label for="billing[state]" class="mandatory">
-                {{ __('shop::app.checkout.onepage.state') }}
-            </label>
+{{--        <div :class="`col-12 form-field ${errors.has('address-form.billing[state]') ? 'has-error' : ''}`">--}}
+{{--            <label for="billing[state]" class="mandatory">--}}
+{{--                {{ __('shop::app.checkout.onepage.state') }}--}}
+{{--            </label>--}}
 
-            <input
-                type="text"
-                class="control"
-                id="billing[state]"
-                name="billing[state]"
-                v-validate="'required'"
-                v-if="!haveStates('billing')"
-                v-model="address.billing.state"
-                @change="validateForm('address-form')"
-                data-vv-as="&quot;{{ __('shop::app.checkout.onepage.state') }}&quot;" />
+{{--            <input--}}
+{{--                type="text"--}}
+{{--                class="control"--}}
+{{--                id="billing[state]"--}}
+{{--                name="billing[state]"--}}
+{{--                v-validate="'required'"--}}
+{{--                v-if="!haveStates('billing')"--}}
+{{--                v-model="address.billing.state"--}}
+{{--                @change="validateForm('address-form')"--}}
+{{--                data-vv-as="&quot;{{ __('shop::app.checkout.onepage.state') }}&quot;" />--}}
 
-            <select
-                id="billing[state]"
-                name="billing[state]"
-                v-validate="'required'"
-                v-if="haveStates('billing')"
-                class="control styled-select"
-                v-model="address.billing.state"
-                @change="validateForm('address-form')"
-                data-vv-as="&quot;{{ __('shop::app.checkout.onepage.state') }}&quot;">
+{{--            <select--}}
+{{--                id="billing[state]"--}}
+{{--                name="billing[state]"--}}
+{{--                v-validate="'required'"--}}
+{{--                v-if="haveStates('billing')"--}}
+{{--                class="control styled-select"--}}
+{{--                v-model="address.billing.state"--}}
+{{--                @change="validateForm('address-form')"--}}
+{{--                data-vv-as="&quot;{{ __('shop::app.checkout.onepage.state') }}&quot;">--}}
 
-                <option value="">{{ __('shop::app.checkout.onepage.select-state') }}</option>
+{{--                <option value="">{{ __('shop::app.checkout.onepage.select-state') }}</option>--}}
 
-                <option v-for='(state, index) in countryStates[address.billing.country]' :value="state.code">
-                    @{{ state.default_name }}
-                </option>
-            </select>
-            <div class="select-icon-container" v-if="haveStates('billing')">
-                <i class="select-icon rango-arrow-down"></i>
-            </div>
+{{--                <option v-for='(state, index) in countryStates[address.billing.country]' :value="state.code">--}}
+{{--                    @{{ state.default_name }}--}}
+{{--                </option>--}}
+{{--            </select>--}}
+{{--            <div class="select-icon-container" v-if="haveStates('billing')">--}}
+{{--                <i class="select-icon rango-arrow-down"></i>--}}
+{{--            </div>--}}
 
-            <span class="control-error" v-if="errors.has('address-form.billing[state]')">
-                @{{ errors.first('address-form.billing[state]') }}
-            </span>
-        </div>
+{{--            <span class="control-error" v-if="errors.has('address-form.billing[state]')">--}}
+{{--                @{{ errors.first('address-form.billing[state]') }}--}}
+{{--            </span>--}}
+{{--        </div>--}}
 
-        <div :class="`col-12 form-field ${errors.has('address-form.billing[postcode]') ? 'has-error' : ''}`">
-            <label for="billing[postcode]" class="mandatory">
-                {{ __('shop::app.checkout.onepage.postcode') }}
-            </label>
+{{--        <div :class="`col-12 form-field ${errors.has('address-form.billing[postcode]') ? 'has-error' : ''}`">--}}
+{{--            <label for="billing[postcode]" class="mandatory">--}}
+{{--                {{ __('shop::app.checkout.onepage.postcode') }}--}}
+{{--            </label>--}}
 
-            <input
-                type="text"
-                class="control"
-                id="billing[postcode]"
-                v-validate="'required'"
-                name="billing[postcode]"
-                v-model="address.billing.postcode"
-                @change="validateForm('address-form')"
-                data-vv-as="&quot;{{ __('shop::app.checkout.onepage.postcode') }}&quot;" />
+{{--            <input--}}
+{{--                type="text"--}}
+{{--                class="control"--}}
+{{--                id="billing[postcode]"--}}
+{{--                v-validate="'required'"--}}
+{{--                name="billing[postcode]"--}}
+{{--                v-model="address.billing.postcode"--}}
+{{--                @change="validateForm('address-form')"--}}
+{{--                data-vv-as="&quot;{{ __('shop::app.checkout.onepage.postcode') }}&quot;" />--}}
 
-            <span class="control-error" v-if="errors.has('address-form.billing[postcode]')">
-                @{{ errors.first('address-form.billing[postcode]') }}
-            </span>
-        </div>
+{{--            <span class="control-error" v-if="errors.has('address-form.billing[postcode]')">--}}
+{{--                @{{ errors.first('address-form.billing[postcode]') }}--}}
+{{--            </span>--}}
+{{--        </div>--}}
 
         <div :class="`col-12 form-field ${errors.has('address-form.billing[phone]') ? 'has-error' : ''}`">
             <label for="billing[phone]" class="mandatory">

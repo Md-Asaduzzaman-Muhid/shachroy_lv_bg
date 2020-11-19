@@ -7,7 +7,6 @@ return [
             'enable-facebook' => 'Enable Facebook',
             'enable-twitter' => 'Enable Twitter',
             'enable-google' => 'Enable Google',
-            'enable-twitter' => 'Enable Twitter',
             'enable-linkedin' => 'Enable LinkedIn',
             'enable-github' => 'Enable Github'
         ]

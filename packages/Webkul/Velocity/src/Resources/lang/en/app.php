@@ -98,7 +98,7 @@ return [
             'subscription-content'      => 'Subscription bar Content',
             'sidebar-categories'        => 'Sidebar Categories',
             'header_content_count'      => 'Header Content Count',
-            'footer-left-raw-content'   => '<p>We love to craft softwares and solve the real world problems with the binaries. We are highly committed to our goals. We invest our resources to create world class easy to use softwares and applications for the enterprise business with the top notch, on the edge technology expertise.</p>',
+            'footer-left-raw-content'   => '<p>Shachroy is one of the largest e-commerce web experience with its super fast delivery and quality of service. Shachroy is expending its service in Dhaka city and gain trust over the time.</p>',
             'slider-path'               => 'Slider Path',
             'category-logo'             => 'Category logo',
             'product-policy'            => 'Product Policy',

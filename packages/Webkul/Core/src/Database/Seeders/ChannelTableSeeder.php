@@ -27,7 +27,7 @@ class ChannelTableSeeder extends Seeder
             'name'              => 'Default',
             'default_locale_id' => 1,
             'base_currency_id'  => 1,
-            'home_seo'          => '{"meta_title": "Demo store", "meta_keywords": "Demo store meta keyword", "meta_description": "Demo store meta description"}',
+            'home_seo'          => '{"meta_title": "Shachroy.com", "meta_keywords": "All your needs at one place", "meta_description": "All your needs at one place"}',
         ]);
 
         DB::table('channel_currencies')->insert([

@@ -19,11 +19,11 @@ class InventoryTableSeeder extends Seeder
             'contact_email'  => 'warehouse@example.com',
             'contact_number' => 1234567899,
             'status'         => 1,
-            'country'        => 'US',
-            'state'          => 'MI',
-            'street'         => '12th Street',
-            'city'           => 'Detroit',
-            'postcode'       => '48127',
+            'country'        => 'BD',
+            'state'          => 'DK',
+            'street'         => '84 North Adabor',
+            'city'           => 'Dhaka',
+            'postcode'       => '1207',
         ]);
     }
 }

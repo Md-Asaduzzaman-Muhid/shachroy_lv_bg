@@ -18,16 +18,21 @@ class LocalesTableSeeder extends Seeder
                 'id'   => 1,
                 'code' => 'en',
                 'name' => 'English',
-            ], [
+            ],
+            [
                 'id'   => 2,
+                'code' => 'bd',
+                'name' => 'Bangla',
+            ], [
+                'id'   => 3,
                 'code' => 'fr',
                 'name' => 'French',
             ], [
-                'id'   => 3,
+                'id'   => 4,
                 'code' => 'nl',
                 'name' => 'Dutch',
             ], [
-                'id'   => 4,
+                'id'   => 5,
                 'code' => 'tr',
                 'name' => 'Türkçe',
             ]]);
