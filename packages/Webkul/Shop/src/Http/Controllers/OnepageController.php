@@ -75,7 +75,6 @@ class OnepageController extends Controller
         }
 
         Cart::collectTotals();
-
         return view($this->_config['view'], compact('cart'));
     }
 

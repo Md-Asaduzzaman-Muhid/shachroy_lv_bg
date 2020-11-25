@@ -5,7 +5,7 @@
     @if (isset($shipping) && $shipping)
         <div :class="`col-12 form-field mb30 ${errors.has('address-form.shipping[first_name]') ? 'has-error' : ''}`">
             <label for="shipping[first_name]" class="mandatory" style="width: unset;">
-                {{ __('shop::app.checkout.onepage.first-name') }}
+                Name
             </label>
 
             <input
@@ -43,7 +43,7 @@
 {{--        </div>--}}
 
         <div :class="`col-12 form-field ${errors.has('address-form.shipping[email]') ? 'has-error' : ''}`">
-            <label for="shipping[email]" class="mandatory">
+            <label for="shipping[email]">
                 {{ __('shop::app.checkout.onepage.email') }}
             </label>
 
@@ -52,7 +52,7 @@
                 class="control"
                 id="shipping[email]"
                 name="shipping[email]"
-                v-validate="'required|email'"
+                v-validate="'email'"
                 v-model="address.shipping.email"
                 @change="validateForm('address-form')"
                 data-vv-as="&quot;{{ __('shop::app.checkout.onepage.email') }}&quot;" />
@@ -273,7 +273,7 @@
 
         <div :class="`col-12 form-field ${errors.has('address-form.billing[first_name]') ? 'has-error' : ''}`">
             <label for="billing[first_name]" class="mandatory">
-                {{ __('shop::app.checkout.onepage.first-name') }}
+                Name
             </label>
 
             <input
@@ -533,7 +533,6 @@
                         name="billing[save_as_address]"
                         @change="validateForm('address-form')"
                         v-model="address.billing.save_as_address"/>
-
                     <span class="ml-5">
                         {{ __('shop::app.checkout.onepage.save_as_address') }}
                     </span>
