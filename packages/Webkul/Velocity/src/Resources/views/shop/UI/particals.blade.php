@@ -9,7 +9,7 @@
             <div class="mini-cart-content">
                 <i class="material-icons-outlined text-down-3">shopping_cart</i>
                 <span class="badge" v-text="itemCount" v-if="itemCount != 0"></span>
-                <span class="fs18 fw6 cart-text">{{ __('velocity::app.minicart.cart') }}</span>
+                <!-- <span class="fs18 fw6 cart-text">{{ __('velocity::app.minicart.cart') }}</span> -->
             </div>
             <div class="down-arrow-container">
                 <span class="rango-arrow-down"></span>
@@ -56,7 +56,7 @@
             @if ($logo = core()->getCurrentChannel()->logo_url)
                 <img class="logo" src="{{ $logo }}" alt="" width="200" height="50" />
             @else
-                <img class="logo" src="{{ asset('themes/velocity/assets/images/logo-text.png') }}" alt="" width="200" height="50" />
+                <img class="logo" src="{{ asset('themes/velocity/assets/images/logo-text.png') }}" alt="logo" width="200" height="50" />
             @endif
         </a>
     </script>
@@ -153,7 +153,7 @@
                                 <div class="badge-container" v-if="compareCount > 0">
                                     <span class="badge" v-text="compareCount"></span>
                                 </div>
-                                <span>{{ __('velocity::app.customer.compare.text') }}</span>
+                                <!-- <span>{{ __('velocity::app.customer.compare.text') }}</span> -->
                             </a>
                         @endif
                     {!! view_render_event('bagisto.shop.layout.header.compare.after') !!}
@@ -165,7 +165,7 @@
                                 <div class="badge-container" v-if="wishlistCount > 0">
                                     <span class="badge" v-text="wishlistCount"></span>
                                 </div>
-                                <span>{{ __('shop::app.layouts.wishlist') }}</span>
+                                <!-- <span>{{ __('shop::app.layouts.wishlist') }}</span> -->
                             </a>
                         @endif
                     {!! view_render_event('bagisto.shop.layout.header.wishlist.after') !!}

@@ -11,7 +11,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-        <title>Bagisto Installer</title>
+        <title>shachroy.com</title>
 
         <link rel="icon" sizes="16x16" href="Images/favicon.ico">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,500">

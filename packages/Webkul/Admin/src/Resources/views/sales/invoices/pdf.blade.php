@@ -107,11 +107,11 @@
                         <h1 class="text-center">{{ __('admin::app.sales.invoices.invoice') }}</h1>
                     </div>
                 </div>
-                @if (core()->getConfigData('sales.orderSettings.invoice_slip_design.logo'))
+                <!-- @if (core()->getConfigData('sales.orderSettings.invoice_slip_design.logo'))
                     <div class="image">
-                        <img class="logo" src="{{ Storage::url(core()->getConfigData('sales.orderSettings.invoice_slip_design.logo')) }}"/>
+                        <img class="logo" src="{{ asset('themes/velocity/assets/images/logo-text.png') }}"/>
                     </div>
-                @endif
+                @endif -->
                 <div class="merchant-details">
                     <div><span class="merchant-details-title">{{ core()->getConfigData('sales.shipping.origin.store_name') ? core()->getConfigData('sales.shipping.origin.store_name') : '' }}</span></div>
                     <div>{{ core()->getConfigData('sales.shipping.origin.address1') ? core()->getConfigData('sales.shipping.origin.address1') : '' }}</div>
@@ -135,6 +135,10 @@
             </div>
 
             <div class="invoice-summary">
+                <div class="row">
+                    <img src="{{ asset('themes/velocity/assets/images/logo-text.png') }}" alt="logo" width="220" height="55"/>
+                </div>
+                <!-- <h2>Shachroy.com</h2> -->
                 <div class="row">
                     <span class="label">{{ __('admin::app.sales.invoices.invoice-id') }} -</span>
                     <span class="value">#{{ $invoice->id }}</span>
@@ -260,11 +264,11 @@
                                             </div>
                                         @endif
                                     </td>
-                                    <td>{{ core()->formatBasePrice($item->base_price) }}</td>
+                                    <td>TK {{ number_format($item->base_price, 2, '.', ',') }}</td>
                                     <td class="text-center">{{ $item->qty }}</td>
-                                    <td class="text-center">{{ core()->formatBasePrice($item->base_total) }}</td>
-                                    <td class="text-center">{{ core()->formatBasePrice($item->base_tax_amount) }}</td>
-                                    <td class="text-center">{{ core()->formatBasePrice($item->base_total + $item->base_tax_amount) }}</td>
+                                    <td class="text-center">TK {{ number_format($item->base_total, 2, '.', ',') }}</td>
+                                    <td class="text-center">TK {{ number_format($item->base_tax_amount, 2, '.', ',') }}</td>
+                                    <td class="text-center">TK {{ number_format($item->base_total + $item->base_tax_amount, 2, '.', ',') }}</td>
                                 </tr>
                             @endforeach
 
@@ -277,31 +281,31 @@
                     <tr>
                         <td>{{ __('admin::app.sales.orders.subtotal') }}</td>
                         <td>-</td>
-                        <td>{{ core()->formatBasePrice($invoice->base_sub_total) }}</td>
+                        <td>TK {{ number_format($invoice->base_sub_total, 2, '.', ',') }}</td>
                     </tr>
 
                     <tr>
                         <td>{{ __('admin::app.sales.orders.shipping-handling') }}</td>
                         <td>-</td>
-                        <td>{{ core()->formatBasePrice($invoice->base_shipping_amount) }}</td>
+                        <td>TK {{ number_format($invoice->base_shipping_amount, 2, '.', ',') }}</td>
                     </tr>
 
-                    <tr>
+                    <!-- <tr>
                         <td>{{ __('admin::app.sales.orders.tax') }}</td>
                         <td>-</td>
                         <td>{{ core()->formatBasePrice($invoice->base_tax_amount) }}</td>
-                    </tr>
+                    </tr> -->
 
                     <tr>
                         <td>{{ __('admin::app.sales.orders.discount') }}</td>
                         <td>-</td>
-                        <td>{{ core()->formatBasePrice($invoice->base_discount_amount) }}</td>
+                        <td>TK {{ number_format($invoice->base_discount_amount, 2, '.', ',') }}</td>
                     </tr>
 
                     <tr>
                         <td><strong>{{ __('admin::app.sales.orders.grand-total') }}</strong></td>
                         <td><strong>-</strong></td>
-                        <td><strong>{{ core()->formatBasePrice($invoice->base_grand_total) }}</strong></td>
+                        <td><strong>TK {{ number_format($invoice->base_grand_total, 2, '.', ',') }}</strong></td>
                     </tr>
                 </table>
 

@@ -1,4 +1,4 @@
-<div class="mini-cart-container pull-right">
+<div class="mini-cart-container pull-right pr-5 mr-2">
     @php
         $minimumOrderAmount = (int) core()->getConfigData('sales.orderSettings.minimum-order.minimum_order_amount') ?? 0;
     @endphp

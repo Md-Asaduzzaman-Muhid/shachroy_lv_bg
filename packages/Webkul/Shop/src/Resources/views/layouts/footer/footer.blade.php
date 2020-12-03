@@ -88,4 +88,5 @@
             </div>
         </div>
     </div>
+    <div class="footer-copyright">shachroy © All Right Reserved</div>
 </div>

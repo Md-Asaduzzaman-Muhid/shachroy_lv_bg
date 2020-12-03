@@ -52,7 +52,6 @@
                 class="control"
                 id="shipping[email]"
                 name="shipping[email]"
-                v-validate="'email'"
                 v-model="address.shipping.email"
                 @change="validateForm('address-form')"
                 data-vv-as="&quot;{{ __('shop::app.checkout.onepage.email') }}&quot;" />
@@ -119,7 +118,7 @@
             </span>
         </div>
 
-        <div :class="`col-12 form-field ${errors.has('address-form.shipping[country]') ? 'has-error' : ''}`">
+        <!-- <div :class="`col-12 form-field ${errors.has('address-form.shipping[country]') ? 'has-error' : ''}`">
             <label for="shipping[country]" class="mandatory">
                 {{ __('shop::app.checkout.onepage.country') }}
             </label>
@@ -148,7 +147,7 @@
             <span class="control-error" v-if="errors.has('address-form.shipping[country]')">
                 @{{ errors.first('address-form.shipping[country]') }}
             </span>
-        </div>
+        </div> -->
 
 
 {{--        <div :class="`col-12 form-field ${errors.has('address-form.shipping[state]') ? 'has-error' : ''}`">--}}
@@ -249,7 +248,9 @@
                     </span>
                 </span>
             </div>
+            <!-- <a class="theme-btn disabled-btn">Continue</a> -->
         @endauth
+        
 
     @elseif (isset($billing) && $billing)
 {{--        <div :class="`col-12 form-field ${errors.has('address-form.billing[company_name]') ? 'has-error' : ''}`">--}}
@@ -312,7 +313,7 @@
 {{--        </div>--}}
 
         <div :class="`col-12 form-field ${errors.has('address-form.billing[email]') ? 'has-error' : ''}`">
-            <label for="billing[email]" class="mandatory">
+            <label for="billing[email]" >
                 {{ __('shop::app.checkout.onepage.email') }}
             </label>
 
@@ -322,7 +323,6 @@
                 id="billing[email]"
                 name="billing[email]"
                 @blur="isCustomerExist"
-                v-validate="'required|email'"
                 v-model="address.billing.email"
                 @change="validateForm('address-form')"
                 data-vv-as="&quot;{{ __('shop::app.checkout.onepage.email') }}&quot;" />
@@ -393,7 +393,7 @@
             </span>
         </div>
 
-        <div :class="`col-12 form-field ${errors.has('address-form.billing[country]') ? 'has-error' : ''}`">
+        <!-- <div :class="`col-12 form-field ${errors.has('address-form.billing[country]') ? 'has-error' : ''}`">
             <label for="billing[country]" class="mandatory">
                 {{ __('shop::app.checkout.onepage.country') }}
             </label>
@@ -422,7 +422,7 @@
             <span class="control-error" v-if="errors.has('address-form.billing[country]')">
                 @{{ errors.first('address-form.billing[country]') }}
             </span>
-        </div>
+        </div> -->
 
 {{--        <div :class="`col-12 form-field ${errors.has('address-form.billing[state]') ? 'has-error' : ''}`">--}}
 {{--            <label for="billing[state]" class="mandatory">--}}
@@ -520,6 +520,7 @@
                         {{ __('shop::app.checkout.onepage.use_for_shipping') }}
                     </span>
                 </span>
+                <!-- <a class="theme-btn disabled-btn">Continue</a> -->
             </div>
         @endif
 
@@ -537,6 +538,7 @@
                         {{ __('shop::app.checkout.onepage.save_as_address') }}
                     </span>
                 </span>
+                <!-- <a class="theme-btn disabled-btn">Continue</a> -->
             </div>
             @php
             @endphp

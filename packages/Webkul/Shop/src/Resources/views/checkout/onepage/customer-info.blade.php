@@ -81,7 +81,7 @@
         </div>
 
         <div class="control-group" :class="[errors.has('address-form.billing[email]') ? 'has-error' : '']">
-            <label for="billing[email]" class="required">
+            <label for="billing[email]" >
                 {{ __('shop::app.checkout.onepage.email') }}
             </label>
 
