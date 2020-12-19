@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d666b5a314de775c8d05fb2f94aa9e01",
+    "content-hash": "05ee4b39571b2d40fc315b7fe2c824f0",
     "packages": [
         {
             "name": "algolia/algoliasearch-client-php",
@@ -1126,6 +1126,61 @@
                 "search"
             ],
             "time": "2020-11-11T16:31:00+00:00"
+        },
+        {
+            "name": "emotality/tawk-laravel",
+            "version": "v1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/emotality/tawk-laravel.git",
+                "reference": "69224b05989b16e2838a3e76d5018c1420eaae83"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/emotality/tawk-laravel/zipball/69224b05989b16e2838a3e76d5018c1420eaae83",
+                "reference": "69224b05989b16e2838a3e76d5018c1420eaae83",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.6.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Emotality\\TawkTo\\TawkToServiceProvider"
+                    ],
+                    "aliases": {
+                        "TawkTo": "Emotality\\TawkTo\\TawkTo"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Emotality\\TawkTo\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jean-Pierre Fourie",
+                    "email": "jp@emotality.com",
+                    "homepage": "https://emotality.com"
+                }
+            ],
+            "description": "A tawk.to chat widget for Laravel.",
+            "keywords": [
+                "chat",
+                "laravel",
+                "tawk",
+                "tawk.to",
+                "tawkto",
+                "widget"
+            ],
+            "time": "2020-10-19T03:16:51+00:00"
         },
         {
             "name": "ezimuel/guzzlestreams",
@@ -3028,6 +3083,60 @@
             "time": "2020-07-23T08:41:23+00:00"
         },
         {
+            "name": "myclabs/deep-copy",
+            "version": "1.10.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/myclabs/DeepCopy.git",
+                "reference": "776f831124e9c62e1a2c601ecc52e776d8bb7220"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/myclabs/DeepCopy/zipball/776f831124e9c62e1a2c601ecc52e776d8bb7220",
+                "reference": "776f831124e9c62e1a2c601ecc52e776d8bb7220",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.1 || ^8.0"
+            },
+            "replace": {
+                "myclabs/deep-copy": "self.version"
+            },
+            "require-dev": {
+                "doctrine/collections": "^1.0",
+                "doctrine/common": "^2.6",
+                "phpunit/phpunit": "^7.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "DeepCopy\\": "src/DeepCopy/"
+                },
+                "files": [
+                    "src/DeepCopy/deep_copy.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Create deep copies (clones) of your objects",
+            "keywords": [
+                "clone",
+                "copy",
+                "duplicate",
+                "object",
+                "object graph"
+            ],
+            "funding": [
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/myclabs/deep-copy",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2020-11-13T09:40:50+00:00"
+        },
+        {
             "name": "myclabs/php-enum",
             "version": "1.7.7",
             "source": {
@@ -3082,6 +3191,102 @@
                 }
             ],
             "time": "2020-11-14T18:14:52+00:00"
+        },
+        {
+            "name": "nahid/apiz",
+            "version": "v3.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nahid/apiz.git",
+                "reference": "9e7137d9862b40d5eee50696c7859721568d40cc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nahid/apiz/zipball/9e7137d9862b40d5eee50696c7859721568d40cc",
+                "reference": "9e7137d9862b40d5eee50696c7859721568d40cc",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "ext-xmlwriter": "*",
+                "guzzlehttp/guzzle": "^6.3",
+                "lib-libxml": ">=2.6.20",
+                "nahid/qarray": "^1.1",
+                "php": ">=5.5.9 | >=7.1"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^6.2",
+                "symfony/var-dumper": "^3.4"
+            },
+            "type": "php",
+            "autoload": {
+                "psr-4": {
+                    "Apiz\\": "src/"
+                },
+                "files": []
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nahid Bin Azhar",
+                    "email": "nahid.dns@gmail.com"
+                }
+            ],
+            "description": "Apiz is a boilerplate for REST API manager",
+            "time": "2019-09-05T08:10:18+00:00"
+        },
+        {
+            "name": "nahid/qarray",
+            "version": "v1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nahid/qarray.git",
+                "reference": "885a13460f0f72d5bf5aee9a33daf05a328f5e13"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nahid/qarray/zipball/885a13460f0f72d5bf5aee9a33daf05a328f5e13",
+                "reference": "885a13460f0f72d5bf5aee9a33daf05a328f5e13",
+                "shasum": ""
+            },
+            "require": {
+                "myclabs/deep-copy": "^1.8",
+                "php": ">=5.6.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.8 || ^5.0",
+                "symfony/var-dumper": "^3.4"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Nahid\\QArray\\": "src/"
+                },
+                "files": [
+                    "helpers/qarray.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nahid Bin Azhar",
+                    "email": "nahid.dns@gmail.com"
+                }
+            ],
+            "description": "QArray is a PHP abstraction for quering array",
+            "homepage": "https://github.com/nahid/qarray",
+            "keywords": [
+                "array",
+                "php",
+                "query"
+            ],
+            "time": "2019-10-30T06:25:33+00:00"
         },
         {
             "name": "namshi/jose",
@@ -4372,6 +4577,67 @@
                 "stylesheet"
             ],
             "time": "2020-06-01T09:10:00+00:00"
+        },
+        {
+            "name": "shipu/bkash",
+            "version": "v1.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Shipu/bkash.git",
+                "reference": "66f9efb70714bbb101a941373f151183e770c33b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Shipu/bkash/zipball/66f9efb70714bbb101a941373f151183e770c33b",
+                "reference": "66f9efb70714bbb101a941373f151183e770c33b",
+                "shasum": ""
+            },
+            "require": {
+                "nahid/apiz": "3.0.*",
+                "php": ">=5.6"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Shipu\\Bkash\\BkashServiceProvider"
+                    ],
+                    "aliases": {
+                        "Tokenized": "Shipu\\Bkash\\Facades\\Tokenized",
+                        "Checkout": "Shipu\\Bkash\\Facades\\Checkout",
+                        "Payment": "Shipu\\Bkash\\Facades\\Payment"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Shipu\\Bkash\\": "src/"
+                },
+                "files": [
+                    "src/helpers.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Shipu Ahamed",
+                    "email": "shipuahamed01@gmail.com"
+                }
+            ],
+            "funding": [
+                {
+                    "url": "https://beerpay.io/Shipu/bkash",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://liberapay.com/shipu",
+                    "type": "liberapay"
+                }
+            ],
+            "time": "2020-07-16T09:47:30+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -7595,60 +7861,6 @@
                 "testing"
             ],
             "time": "2020-08-11T18:10:13+00:00"
-        },
-        {
-            "name": "myclabs/deep-copy",
-            "version": "1.10.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/myclabs/DeepCopy.git",
-                "reference": "776f831124e9c62e1a2c601ecc52e776d8bb7220"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/myclabs/DeepCopy/zipball/776f831124e9c62e1a2c601ecc52e776d8bb7220",
-                "reference": "776f831124e9c62e1a2c601ecc52e776d8bb7220",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^7.1 || ^8.0"
-            },
-            "replace": {
-                "myclabs/deep-copy": "self.version"
-            },
-            "require-dev": {
-                "doctrine/collections": "^1.0",
-                "doctrine/common": "^2.6",
-                "phpunit/phpunit": "^7.1"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "DeepCopy\\": "src/DeepCopy/"
-                },
-                "files": [
-                    "src/DeepCopy/deep_copy.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "description": "Create deep copies (clones) of your objects",
-            "keywords": [
-                "clone",
-                "copy",
-                "duplicate",
-                "object",
-                "object graph"
-            ],
-            "funding": [
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/myclabs/deep-copy",
-                    "type": "tidelift"
-                }
-            ],
-            "time": "2020-11-13T09:40:50+00:00"
         },
         {
             "name": "nunomaduro/collision",

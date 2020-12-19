@@ -107,11 +107,11 @@
                         <h1 class="text-center">{{ __('admin::app.sales.invoices.invoice') }}</h1>
                     </div>
                 </div>
-                <!-- @if (core()->getConfigData('sales.orderSettings.invoice_slip_design.logo'))
+                @if (core()->getConfigData('sales.orderSettings.invoice_slip_design.logo'))
                     <div class="image">
-                        <img class="logo" src="{{ asset('themes/velocity/assets/images/logo-text.png') }}"/>
+                        <img class="logo" src="{{ asset('themes/velocity/assets/images/logo-text.png') }}" alt="logo" width="220" height="55"/>
                     </div>
-                @endif -->
+                @endif
                 <div class="merchant-details">
                     <div><span class="merchant-details-title">{{ core()->getConfigData('sales.shipping.origin.store_name') ? core()->getConfigData('sales.shipping.origin.store_name') : '' }}</span></div>
                     <div>{{ core()->getConfigData('sales.shipping.origin.address1') ? core()->getConfigData('sales.shipping.origin.address1') : '' }}</div>
@@ -135,9 +135,9 @@
             </div>
 
             <div class="invoice-summary">
-                <div class="row">
+                <!-- <div class="row">
                     <img src="{{ asset('themes/velocity/assets/images/logo-text.png') }}" alt="logo" width="220" height="55"/>
-                </div>
+                </div> -->
                 <!-- <h2>Shachroy.com</h2> -->
                 <div class="row">
                     <span class="label">{{ __('admin::app.sales.invoices.invoice-id') }} -</span>

@@ -230,7 +230,6 @@ return [
          */
 
         Astrotomic\Translatable\TranslatableServiceProvider::class,
-        // Emotality\TawkTo\TawkToServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -281,6 +280,9 @@ return [
         Webkul\Velocity\Providers\VelocityServiceProvider::class,
         Webkul\BookingProduct\Providers\BookingProductServiceProvider::class,
         Webkul\SocialLogin\Providers\SocialLoginServiceProvider::class,
+
+        // Shipu\Bkash\BkashServiceProvider::class,
+        // Emotality\TawkTo\TawkToServiceProvider::class,
     ],
 
     /*
@@ -339,6 +341,11 @@ return [
         'Excel' => Maatwebsite\Excel\Facades\Excel::class,
         'Concord' => Konekt\Concord\Facades\Concord::class,
         'Helper'  => Konekt\Concord\Facades\Helper::class,
-        'TawkTo' => Emotality\TawkTo\TawkTo::class,
+
+        // 'TawkTo' => Emotality\TawkTo\TawkTo::class,
+        
+        // 'Tokenized'   =>  Shipu\Bkash\Facades\Tokenized::class,
+        // 'Checkout'   =>  Shipu\Bkash\Facades\Checkout::class,
+        // 'Payment'   =>  Shipu\Bkash\Facades\Payment::class,
     ],
 ];

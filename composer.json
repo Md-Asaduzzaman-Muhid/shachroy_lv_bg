@@ -23,6 +23,7 @@
         "bagistobrasil/bagisto-product-social-share": "^0.1.2",
         "barryvdh/laravel-dompdf": "0.8.6",
         "doctrine/dbal": "2.9.2",
+        "emotality/tawk-laravel": "^1.1",
         "fideloper/proxy": "^4.2",
         "flynsarmy/db-blade-compiler": "^5.5",
         "fzaninotto/faker": "^1.4",
@@ -38,6 +39,7 @@
         "laravel/ui": "^2.0",
         "maatwebsite/excel": "3.1.19",
         "prettus/l5-repository": "^2.6",
+        "shipu/bkash": "^1.2",
         "tymon/jwt-auth": "^1.0.0"
     },
 
